@@ -11,38 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://clagjb1o6qtns" path="res://Models/trees/pine_2.tscn" id="9_s8q1p"]
 [ext_resource type="PackedScene" uid="uid://ruy4ynkdadmo" path="res://Models/trees/pine_crooked_2.tscn" id="10_p6om3"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w430g"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-
-[sub_resource type="Sky" id="Sky_ur46f"]
-sky_material = SubResource("ProceduralSkyMaterial_w430g")
-
-[sub_resource type="Environment" id="Environment_3a6ed"]
-background_mode = 2
-sky = SubResource("Sky_ur46f")
-tonemap_mode = 2
-glow_enabled = true
-volumetric_fog_enabled = true
-volumetric_fog_density = 0.03
-volumetric_fog_albedo = Color(0.999983, 0.137848, 0.25675, 1)
-volumetric_fog_emission = Color(0.999999, 0.491377, 0.48419, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_stacp"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hicms"]
 albedo_texture = ExtResource("1_iahc4")
-uv1_triplanar = true
-
-[sub_resource type="BoxMesh" id="BoxMesh_3x3qa"]
-size = Vector3(0.1, 0.3, 1)
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_ptp78"]
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_h7ad7"]
-points = PackedVector3Array(-0.125207, -0.532801, -0.480507, 0.0227831, 0.47607, 0.498884, 0.169713, 0.559144, 0.464172, 0.231051, -0.803591, 0.320455, 0.40741, 0.651043, -0.243523, -0.482789, 0.594843, 0.0822132, -0.362868, -0.682312, 0.289697, 0.469044, -0.654529, -0.0662713, -0.127444, 0.842701, -0.338103, -0.393435, -0.683942, -0.244717, 0.438255, 0.623309, 0.200849, 0.0841477, 0.977454, 0.114795, -0.0682023, -0.976458, -0.12927, 0.20055, -0.563129, -0.451454, -0.185527, 0.595453, -0.453475, -0.273363, 0.592268, 0.407754, -0.00693649, -0.476823, 0.49966, 0.375821, -0.588614, 0.316955, 0.111579, 0.563059, -0.481177, -0.41725, 0.527866, -0.270497, -0.484546, -0.596972, -0.0665097, -0.279747, 0.908561, 0.0533361, -0.250197, -0.880712, 0.205319, 0.263647, -0.902771, -0.127394, 0.293368, 0.871526, -0.157196, 0.373412, -0.526319, -0.328246, 0.499663, 0.476641, -0.00688856, 0.0531056, 0.875001, 0.324703, -0.154543, -0.590854, 0.465879, -0.0972799, -0.782358, -0.398188, -0.387649, -0.498171, 0.31565, -0.30068, -0.587995, -0.388901)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w5i7p"]
-albedo_texture = ExtResource("1_iahc4")
-uv1_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ny4qn"]
 resource_name = "colormap"
@@ -84,8 +54,30 @@ shadow_mesh = SubResource("ArrayMesh_41a0w")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hshbf"]
 albedo_color = Color(0.345098, 0.345098, 0.352941, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hicms"]
-albedo_texture = ExtResource("1_iahc4")
+[sub_resource type="BoxMesh" id="BoxMesh_3x3qa"]
+size = Vector3(0.1, 0.3, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ptp78"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_h7ad7"]
+points = PackedVector3Array(-0.125207, -0.532801, -0.480507, 0.0227831, 0.47607, 0.498884, 0.169713, 0.559144, 0.464172, 0.231051, -0.803591, 0.320455, 0.40741, 0.651043, -0.243523, -0.482789, 0.594843, 0.0822132, -0.362868, -0.682312, 0.289697, 0.469044, -0.654529, -0.0662713, -0.127444, 0.842701, -0.338103, -0.393435, -0.683942, -0.244717, 0.438255, 0.623309, 0.200849, 0.0841477, 0.977454, 0.114795, -0.0682023, -0.976458, -0.12927, 0.20055, -0.563129, -0.451454, -0.185527, 0.595453, -0.453475, -0.273363, 0.592268, 0.407754, -0.00693649, -0.476823, 0.49966, 0.375821, -0.588614, 0.316955, 0.111579, 0.563059, -0.481177, -0.41725, 0.527866, -0.270497, -0.484546, -0.596972, -0.0665097, -0.279747, 0.908561, 0.0533361, -0.250197, -0.880712, 0.205319, 0.263647, -0.902771, -0.127394, 0.293368, 0.871526, -0.157196, 0.373412, -0.526319, -0.328246, 0.499663, 0.476641, -0.00688856, 0.0531056, 0.875001, 0.324703, -0.154543, -0.590854, 0.465879, -0.0972799, -0.782358, -0.398188, -0.387649, -0.498171, 0.31565, -0.30068, -0.587995, -0.388901)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w430g"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_ur46f"]
+sky_material = SubResource("ProceduralSkyMaterial_w430g")
+
+[sub_resource type="Environment" id="Environment_3a6ed"]
+background_mode = 2
+sky = SubResource("Sky_ur46f")
+tonemap_mode = 2
+glow_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.03
+volumetric_fog_albedo = Color(0.999983, 0.137848, 0.25675, 1)
+volumetric_fog_emission = Color(0.999999, 0.491377, 0.48419, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ki480"]
 albedo_color = Color(1, 0.482353, 0.482353, 1)
@@ -93,1194 +85,1209 @@ emission_enabled = true
 emission = Color(1, 0.501961, 0.498039, 1)
 emission_energy_multiplier = 3.0
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_stacp"]
+albedo_texture = ExtResource("1_iahc4")
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w5i7p"]
+albedo_texture = ExtResource("1_iahc4")
+uv1_triplanar = true
+
 [node name="World" type="Node3D"]
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.62932, -0.423264, 0.65177, 0, 0.838671, 0.544639, -0.777146, 0.342752, -0.527792, 0, 0, 0)
-shadow_enabled = true
+[node name="Map" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 3, 9.01436, -0.193327, -4.93727)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_3a6ed")
+[node name="buildingContainer" type="Node3D" parent="Map"]
 
-[node name="lowerLevel" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.4564, -8.48337, 1.27061)
+[node name="CSGPolygon3D2" type="CSGPolygon3D" parent="Map/buildingContainer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.29026)
+material_override = SubResource("StandardMaterial3D_hicms")
 use_collision = true
-size = Vector3(32.2395, 0.297241, 32.7271)
-material = SubResource("StandardMaterial3D_stacp")
+polygon = PackedVector2Array(0, 0, -1.85684, -0.0852935, 6.05583, 2.93269, 5.78938, -0.113121)
 
-[node name="upperLevel" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.285457, -0.45645, 1.07783)
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Map/buildingContainer"]
+material_override = SubResource("StandardMaterial3D_hicms")
 use_collision = true
-size = Vector3(32.8499, 0.297241, 33.3615)
-material = SubResource("StandardMaterial3D_stacp")
+polygon = PackedVector2Array(0, 0, -1.85684, -0.0852935, 6.05583, 2.93269, 5.78938, -0.113121)
 
-[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.162646, 0)
-script = ExtResource("1_tn2vw")
+[node name="house1" parent="Map/buildingContainer" instance=ExtResource("8_ul077")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.333333, -18.1869, -0.114502, 0.26347)
 
-[node name="Gun" type="MeshInstance3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.525587, 0.853978, -0.388565)
-mesh = SubResource("BoxMesh_3x3qa")
+[node name="house2" parent="Map/buildingContainer" instance=ExtResource("8_ul077")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.333333, -18.038, -0.114502, 4.44797)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.749922, 0)
-mesh = SubResource("CapsuleMesh_ptp78")
+[node name="crypt2" parent="Map/buildingContainer" instance=ExtResource("4_gwet0")]
+transform = Transform3D(2.38498e-08, -6.97574e-16, -2, 6.97574e-16, 2, -6.97574e-16, 0.666667, -2.32525e-16, 7.94993e-09, 52.2315, -8.14142, 1.99328)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.73289, 0)
-shape = SubResource("ConvexPolygonShape3D_h7ad7")
+[node name="PathContainer" type="Node3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.333333, -9.01436, 0.193327, 1.64576)
 
-[node name="Head" type="Node3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.929911, 0)
-
-[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Head"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0725873, 1.38293, -0.00361061)
-
-[node name="FenceContainer" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 32, 16.1357, -1.16481, 16.2798)
-
-[node name="Node3D" parent="FenceContainer" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.03125, -1.51774, 0.856978, -0.946905)
-
-[node name="Node3D11" parent="FenceContainer/Node3D" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.7275, 0, 0)
-
-[node name="Node3D3" parent="FenceContainer/Node3D" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.92259, 0, 0)
-
-[node name="Node3D2" parent="FenceContainer/Node3D" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.98285, 0, 0)
-
-[node name="Node3D4" parent="FenceContainer/Node3D" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.90544, 0, 0)
-
-[node name="Node3D5" parent="FenceContainer/Node3D" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9724, 0, 0)
-
-[node name="Node3D6" parent="FenceContainer/Node3D" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9552, 0, 0)
-
-[node name="Node3D7" parent="FenceContainer/Node3D" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.895, 0, 0)
-
-[node name="Node3D8" parent="FenceContainer/Node3D" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.8778, 0, 0)
-
-[node name="Node3D9" parent="FenceContainer/Node3D" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.8049, 0, 0)
-
-[node name="Node3D10" parent="FenceContainer/Node3D" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7877, 0, 0)
-
-[node name="Node3D2" parent="FenceContainer" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.03125, -1.51774, 0.856978, 0.0747351)
-
-[node name="Node3D11" parent="FenceContainer/Node3D2" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.7275, 0, 0)
-
-[node name="Node3D3" parent="FenceContainer/Node3D2" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.92259, 0, 0)
-
-[node name="Node3D2" parent="FenceContainer/Node3D2" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.98285, 0, 0)
-
-[node name="Node3D4" parent="FenceContainer/Node3D2" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.90544, 0, 0)
-
-[node name="Node3D5" parent="FenceContainer/Node3D2" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9724, 0, 0)
-
-[node name="Node3D6" parent="FenceContainer/Node3D2" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9552, 0, 0)
-
-[node name="Node3D7" parent="FenceContainer/Node3D2" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.895, 0, 0)
-
-[node name="Node3D8" parent="FenceContainer/Node3D2" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.8778, 0, 0)
-
-[node name="Node3D9" parent="FenceContainer/Node3D2" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.8049, 0, 0)
-
-[node name="Node3D10" parent="FenceContainer/Node3D2" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7877, 0, 0)
-
-[node name="Node3D3" parent="FenceContainer" instance=ExtResource("3_2f24e")]
-transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -0.03125, 1.08996e-17, -1.36598e-09, -31.2946, 0.856978, -0.93944)
-
-[node name="Node3D11" parent="FenceContainer/Node3D3" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.7275, 0, 0)
-
-[node name="Node3D3" parent="FenceContainer/Node3D3" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.92259, 0, 0)
-
-[node name="Node3D2" parent="FenceContainer/Node3D3" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.98285, 0, 0)
-
-[node name="Node3D4" parent="FenceContainer/Node3D3" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.90544, 0, 0)
-
-[node name="Node3D5" parent="FenceContainer/Node3D3" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9724, 0, 0)
-
-[node name="Node3D6" parent="FenceContainer/Node3D3" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9552, 0, 0)
-
-[node name="Node3D7" parent="FenceContainer/Node3D3" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.895, 0, 0)
-
-[node name="Node3D8" parent="FenceContainer/Node3D3" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.8778, 0, 0)
-
-[node name="Node3D9" parent="FenceContainer/Node3D3" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.8049, 0, 0)
-
-[node name="Node3D10" parent="FenceContainer/Node3D3" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7877, 0, 0)
-
-[node name="Node3D4" parent="FenceContainer" instance=ExtResource("3_2f24e")]
-transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -0.03125, 1.08996e-17, -1.36598e-09, 64.6699, -7.20865, -0.93944)
-
-[node name="Node3D11" parent="FenceContainer/Node3D4" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 1.12238e-23, 0, 1.12238e-23, 1, -29.7275, 0, 0)
-
-[node name="Node3D3" parent="FenceContainer/Node3D4" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.92259, 0, 0)
-
-[node name="Node3D2" parent="FenceContainer/Node3D4" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.98285, 0, 0)
-
-[node name="Node3D4" parent="FenceContainer/Node3D4" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.90544, 0, 0)
-
-[node name="Node3D5" parent="FenceContainer/Node3D4" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9724, 0, 0)
-
-[node name="Node3D6" parent="FenceContainer/Node3D4" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9552, 0, 0)
-
-[node name="Node3D7" parent="FenceContainer/Node3D4" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.895, 0, 0)
-
-[node name="Node3D8" parent="FenceContainer/Node3D4" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.8778, 0, 0)
-
-[node name="Node3D9" parent="FenceContainer/Node3D4" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.8049, 0, 0)
-
-[node name="Node3D10" parent="FenceContainer/Node3D4" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7877, 0, 0)
-
-[node name="Node3D5" parent="FenceContainer" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.03125, 62.147, -7.22935, -0.946905)
-
-[node name="Node3D11" parent="FenceContainer/Node3D5" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.7275, 0, 0)
-
-[node name="Node3D3" parent="FenceContainer/Node3D5" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.92259, 0, 0)
-
-[node name="Node3D2" parent="FenceContainer/Node3D5" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.98285, 0, 0)
-
-[node name="Node3D4" parent="FenceContainer/Node3D5" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.90544, 0, 0)
-
-[node name="Node3D5" parent="FenceContainer/Node3D5" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9724, 0, 0)
-
-[node name="Node3D6" parent="FenceContainer/Node3D5" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9552, 0, 0)
-
-[node name="Node3D7" parent="FenceContainer/Node3D5" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.895, 0, 0)
-
-[node name="Node3D8" parent="FenceContainer/Node3D5" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.8778, 0, 0)
-
-[node name="Node3D9" parent="FenceContainer/Node3D5" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.8049, 0, 0)
-
-[node name="Node3D10" parent="FenceContainer/Node3D5" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7877, 0, 0)
-
-[node name="Node3D6" parent="FenceContainer" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.03125, 62.147, -7.22935, 0.0719123)
-
-[node name="Node3D11" parent="FenceContainer/Node3D6" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.7275, 0, 0)
-
-[node name="Node3D3" parent="FenceContainer/Node3D6" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.92259, 0, 0)
-
-[node name="Node3D2" parent="FenceContainer/Node3D6" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.98285, 0, 0)
-
-[node name="Node3D4" parent="FenceContainer/Node3D6" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.90544, 0, 0)
-
-[node name="Node3D5" parent="FenceContainer/Node3D6" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9724, 0, 0)
-
-[node name="Node3D6" parent="FenceContainer/Node3D6" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9552, 0, 0)
-
-[node name="Node3D7" parent="FenceContainer/Node3D6" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.895, 0, 0)
-
-[node name="Node3D8" parent="FenceContainer/Node3D6" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.8778, 0, 0)
-
-[node name="Node3D9" parent="FenceContainer/Node3D6" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.8049, 0, 0)
-
-[node name="Node3D10" parent="FenceContainer/Node3D6" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7877, 0, 0)
-
-[node name="Node3D7" parent="FenceContainer" instance=ExtResource("3_2f24e")]
-transform = Transform3D(0.962923, 0.269777, 0, -0.269777, 0.962923, 0, 0, 0, 0.03125, 29.4634, -7.22935, -0.946905)
-
-[node name="Node3D11" parent="FenceContainer/Node3D7" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.7275, 0, 0)
-
-[node name="Node3D3" parent="FenceContainer/Node3D7" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.92259, 0, 0)
-
-[node name="Node3D2" parent="FenceContainer/Node3D7" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.98285, 0, 0)
-
-[node name="Node3D4" parent="FenceContainer/Node3D7" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.90544, 0, 0)
-
-[node name="Node3D5" parent="FenceContainer/Node3D7" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9724, 0, 0)
-
-[node name="Node3D6" parent="FenceContainer/Node3D7" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9552, 0, 0)
-
-[node name="Node3D7" parent="FenceContainer/Node3D7" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.895, 0, 0)
-
-[node name="Node3D8" parent="FenceContainer/Node3D7" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.8778, 0, 0)
-
-[node name="Node3D9" parent="FenceContainer/Node3D7" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.8049, 0, 0)
-
-[node name="Node3D10" parent="FenceContainer/Node3D7" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7877, 0, 0)
-
-[node name="Node3D8" parent="FenceContainer" instance=ExtResource("3_2f24e")]
-transform = Transform3D(0.962923, 0.269777, 0, -0.269777, 0.962923, 0, 0, 0, 0.03125, 29.4634, -7.22935, 0.0705448)
-
-[node name="Node3D11" parent="FenceContainer/Node3D8" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.7275, 0, 0)
-
-[node name="Node3D3" parent="FenceContainer/Node3D8" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.92259, 0, 0)
-
-[node name="Node3D2" parent="FenceContainer/Node3D8" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.98285, 0, 0)
-
-[node name="Node3D4" parent="FenceContainer/Node3D8" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.90544, 0, 0)
-
-[node name="Node3D5" parent="FenceContainer/Node3D8" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9724, 0, 0)
-
-[node name="Node3D6" parent="FenceContainer/Node3D8" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9552, 0, 0)
-
-[node name="Node3D7" parent="FenceContainer/Node3D8" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.895, 0, 0)
-
-[node name="Node3D8" parent="FenceContainer/Node3D8" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.8778, 0, 0)
-
-[node name="Node3D9" parent="FenceContainer/Node3D8" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.8049, 0, 0)
-
-[node name="Node3D10" parent="FenceContainer/Node3D8" instance=ExtResource("3_2f24e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7877, 0, 0)
-
-[node name="Slope" type="CSGPolygon3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 33, 16.1357, -1.16481, 17.2405)
-use_collision = true
-polygon = PackedVector2Array(0, 0, 0, 1, 1, 1, 31.5069, -7.50943)
-material = SubResource("StandardMaterial3D_w5i7p")
-
-[node name="crypt2" parent="." instance=ExtResource("4_gwet0")]
-transform = Transform3D(2.38498e-08, -6.97574e-16, -2, 6.97574e-16, 2, -6.97574e-16, 2, -6.97574e-16, 2.38498e-08, 61.2459, -8.33475, 1.04256)
-
-[node name="PathContainer" type="Node3D" parent="."]
-
-[node name="road3" type="Node3D" parent="PathContainer"]
+[node name="road3" type="Node3D" parent="Map/PathContainer"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55.3574, -8.33475, 0.242331)
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road3"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.846684, 0.00672913, 0.692406)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road3/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road3/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.850208, 0.00672913, 0)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road3/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road3/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.828732, 0.00672913, 0)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road3/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road3/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.828316, 0.00672913, 0)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road3/road/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road3/road/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.828316, 0.00672913, 0)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road2" type="Node3D" parent="PathContainer"]
+[node name="road2" type="Node3D" parent="Map/PathContainer"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.2292, -8.33475, 0.242331)
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road2"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.738255, 0.00672913, 0.692406)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road4" type="Node3D" parent="PathContainer"]
+[node name="road4" type="Node3D" parent="Map/PathContainer"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.3442, -8.33475, 0.312552)
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.54562, 0.00672913, 1.5686)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road/road/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road/road/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road/road/road/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road/road/road/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road2" type="MeshInstance3D" parent="PathContainer/road4/road"]
+[node name="road2" type="MeshInstance3D" parent="Map/PathContainer/road4/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0759926, 0.00672913, -7.9866)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road/road/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road/road/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road/road/road/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road/road/road/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road2" type="MeshInstance3D" parent="PathContainer/road4/road/road2"]
+[node name="road2" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2"]
 transform = Transform3D(0.00041892, 0, -1, 0, 1, 0, 1, 0, 0.000418916, 6.97001, 0.00672913, -0.049469)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road/road/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road/road/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road/road/road/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road/road/road/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road2" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2"]
+[node name="road2" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2"]
 transform = Transform3D(0.999996, 0, -0.00272268, 0, 1, 0, 0.00272268, 0, 0.999997, -0.0054965, 0.00672913, -7.01911)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road2"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road2/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road2/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road2/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road2/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road2/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road2/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road2/road/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road2/road/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road2/road/road/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road2/road/road/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road2/road/road/road/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road2/road/road/road/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road2/road/road/road/road/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road2/road/road/road/road/road/road/road"]
 transform = Transform3D(1, 0, 8.37786e-11, 0, 1, 0, -1.60985e-10, 0, 1, -0.0200548, 0.00672913, -6.9643)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road3" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2"]
+[node name="road3" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2"]
 transform = Transform3D(0.00041892, 0, -1, 0, 1, 0, 1, 0, 0.000418916, 6.97001, 0.00672913, -0.049469)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road3"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road3/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road3/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road3/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road3/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road3/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road3/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road3/road/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road3/road/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road3/road/road/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road3/road/road/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road3/road/road/road/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road3/road/road/road/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road2" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road3"]
+[node name="road2" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road3"]
 transform = Transform3D(0.999996, 0, -0.00272268, 0, 1, 0, 0.00272268, 0, 0.999997, -0.0054965, 0.00672913, -7.01911)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road3/road2"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road3/road2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road3/road2/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road3/road2/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road3/road2/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road3/road2/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road3/road2/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road3/road2/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road3/road2/road/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road3/road2/road/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road3/road2/road/road/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road3/road2/road/road/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road3/road2/road/road/road/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road3/road2/road/road/road/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road3" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road3"]
+[node name="road3" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road3"]
 transform = Transform3D(0.00041892, 0, -1, 0, 1, 0, 1, 0, 0.000418916, -1.76625, 0.00672913, -7.30333)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road3/road3"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road3/road3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road3/road3/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road3/road3/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road3/road3/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road3/road3/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road3/road3/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road3/road3/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road3/road3/road/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road3/road3/road/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road3/road3/road/road/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road3/road3/road/road/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road3/road3/road/road/road/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road3/road3/road/road/road/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road2" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road3/road3"]
+[node name="road2" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road3/road3"]
 transform = Transform3D(0.999996, 0, -0.00272268, 0, 1, 0, 0.00272268, 0, 0.999997, -0.0054965, 0.00672913, -7.01911)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road3/road3/road2"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road3/road3/road2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road3/road3/road2/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road3/road3/road2/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road3/road3/road2/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road3/road3/road2/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road3/road3/road2/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road3/road3/road2/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road3/road3/road2/road/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road3/road3/road2/road/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road3/road3/road2/road/road/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road3/road3/road2/road/road/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road3/road3/road2/road/road/road/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road3/road3/road2/road/road/road/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road2/road2/road3/road3/road2/road/road/road/road/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road2/road2/road3/road3/road2/road/road/road/road/road/road/road"]
 transform = Transform3D(1, 0, 8.37786e-11, 0, 1, 0, -1.60985e-10, 0, 1, -0.0200548, 0.00672913, -6.9643)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road3" type="MeshInstance3D" parent="PathContainer/road4/road"]
+[node name="road3" type="MeshInstance3D" parent="Map/PathContainer/road4/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7612, 0.00672913, -0.713869)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road4" type="MeshInstance3D" parent="PathContainer/road4/road"]
+[node name="road4" type="MeshInstance3D" parent="Map/PathContainer/road4/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7781, 0.00672913, 0.162325)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road4"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road4/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road4/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road4/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road4/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road4/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road4/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road4/road/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road4/road/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road4/road/road/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road4/road/road/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road4/road/road/road/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road4/road/road/road/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road2" type="MeshInstance3D" parent="PathContainer/road4/road/road4"]
+[node name="road2" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0759926, 0.00672913, -7.9866)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road4/road2"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road4/road2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road4/road2/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road4/road2/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road4/road2/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road4/road2/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road4/road2/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road4/road2/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road4/road2/road/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road4/road2/road/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road4/road2/road/road/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road4/road2/road/road/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road" type="MeshInstance3D" parent="PathContainer/road4/road/road4/road2/road/road/road/road/road/road"]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer/road4/road/road4/road2/road/road/road/road/road/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00199127, 0.00672913, 0.876193)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="GraveContainer" type="Node3D" parent="."]
-
-[node name="Node3D" parent="GraveContainer" instance=ExtResource("5_a74lp")]
-transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 49.2973, -8.33475, -5.39018)
-
-[node name="Node3D2" parent="GraveContainer" instance=ExtResource("5_a74lp")]
-transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 49.316, -8.33475, -2.98969)
-
-[node name="Node3D3" parent="GraveContainer" instance=ExtResource("5_a74lp")]
-transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 49.316, -8.33475, -0.590847)
-
-[node name="Node3D4" parent="GraveContainer" instance=ExtResource("5_a74lp")]
-transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 49.316, -8.33475, 1.99863)
-
-[node name="Node3D5" parent="GraveContainer" instance=ExtResource("5_a74lp")]
-transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 49.316, -8.33475, 4.55378)
-
-[node name="Node3D6" parent="GraveContainer" instance=ExtResource("5_a74lp")]
-transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 49.316, -8.33475, 6.98963)
-
-[node name="gravestone-round4" parent="GraveContainer" instance=ExtResource("6_44nav")]
-transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 51.5226, -8.33475, 4.65038)
-
-[node name="gravestone-round5" parent="GraveContainer" instance=ExtResource("6_44nav")]
-transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 51.5226, -8.33475, 6.84286)
-
-[node name="gravestone-cross2" parent="GraveContainer" instance=ExtResource("7_y82dc")]
-transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 51.3443, -8.33475, -0.757761)
-
-[node name="gravestone-cross3" parent="GraveContainer" instance=ExtResource("7_y82dc")]
-transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 51.3443, -8.33475, 1.95162)
-
-[node name="gravestone-round2" parent="GraveContainer" instance=ExtResource("6_44nav")]
-transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 51.5226, -8.33475, -5.37602)
-
-[node name="gravestone-round3" parent="GraveContainer" instance=ExtResource("6_44nav")]
-transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 51.5226, -8.33475, -3.23646)
-
-[node name="Sketchfab_Scene" parent="." instance=ExtResource("8_ul077")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.17254, -0.307829, -4.14686)
-
-[node name="Sketchfab_Scene2" parent="." instance=ExtResource("8_ul077")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.02365, -0.307829, 8.40665)
-
-[node name="TreeContainer" type="Node3D" parent="."]
-
-[node name="pine2" parent="TreeContainer" instance=ExtResource("9_s8q1p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.5898, -8.33475, -11.0872)
-
-[node name="pine3" parent="TreeContainer/pine2" instance=ExtResource("9_s8q1p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1776, 0, -0.283158)
-
-[node name="pine4" parent="TreeContainer/pine2" instance=ExtResource("9_s8q1p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.3018, 0, -0.283158)
-
-[node name="pine-crooked2" parent="TreeContainer/pine2" instance=ExtResource("10_p6om3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.75109, 0, -0.0930223)
-
-[node name="pine-crooked3" parent="TreeContainer/pine2" instance=ExtResource("10_p6om3")]
-transform = Transform3D(0.707107, 1.60554e-24, 0.707107, 3.48787e-16, 1, -3.48787e-16, -0.707107, 4.93259e-16, 0.707107, 3.71115, 0, 0.228426)
-
-[node name="pine-crooked4" parent="TreeContainer/pine2" instance=ExtResource("10_p6om3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.105, 0, -0.0930223)
-
-[node name="pine-crooked5" parent="TreeContainer/pine2" instance=ExtResource("10_p6om3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7965, 0, -0.0930223)
-
-[node name="pine-crooked6" parent="TreeContainer" instance=ExtResource("10_p6om3")]
-transform = Transform3D(0.67, 0, 0, 0, 0.67, 0, 0, 0, 0.67, 57.0456, -8.33475, 3.89985)
-
-[node name="pine-crooked2" parent="TreeContainer/pine-crooked6" instance=ExtResource("10_p6om3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.048378, 0, -9.16239)
-
-[node name="pine3" parent="TreeContainer" instance=ExtResource("9_s8q1p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.5898, -8.33475, 13.8084)
-
-[node name="pine3" parent="TreeContainer/pine3" instance=ExtResource("9_s8q1p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1776, 0, -0.283158)
-
-[node name="pine4" parent="TreeContainer/pine3" instance=ExtResource("9_s8q1p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.3018, 0, -0.283158)
-
-[node name="pine-crooked2" parent="TreeContainer/pine3" instance=ExtResource("10_p6om3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.75109, 0, -0.0930223)
-
-[node name="pine-crooked3" parent="TreeContainer/pine3" instance=ExtResource("10_p6om3")]
-transform = Transform3D(0.707107, 1.60554e-24, 0.707107, 3.48787e-16, 1, -3.48787e-16, -0.707107, 4.93259e-16, 0.707107, 3.71115, 0, 0.228426)
-
-[node name="pine-crooked4" parent="TreeContainer/pine3" instance=ExtResource("10_p6om3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.105, 0, -0.0930223)
-
-[node name="pine-crooked5" parent="TreeContainer/pine3" instance=ExtResource("10_p6om3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7965, 0, -0.0930223)
-
-[node name="pine4" parent="TreeContainer" instance=ExtResource("9_s8q1p")]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -10.7271, -0.271615, -11.0872)
-
-[node name="pine3" parent="TreeContainer/pine4" instance=ExtResource("9_s8q1p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.73735, 0, -0.283158)
-
-[node name="pine4" parent="TreeContainer/pine4" instance=ExtResource("9_s8q1p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.7173, 0, -0.283158)
-
-[node name="pine-crooked2" parent="TreeContainer/pine4" instance=ExtResource("10_p6om3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.81198, 0, -0.0930223)
-
-[node name="pine-crooked3" parent="TreeContainer/pine4" instance=ExtResource("10_p6om3")]
-transform = Transform3D(0.707107, 1.60554e-24, 0.707107, 3.48787e-16, 1, -3.48787e-16, -0.707107, 4.93259e-16, 0.707107, 2.79173, 0, 0.228426)
-
-[node name="pine-crooked4" parent="TreeContainer/pine4" instance=ExtResource("10_p6om3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.9884, 0, -0.0930223)
-
-[node name="pine-crooked5" parent="TreeContainer/pine4" instance=ExtResource("10_p6om3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.7556, 0, -0.0930223)
-
-[node name="pine5" parent="TreeContainer" instance=ExtResource("9_s8q1p")]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -10.6196, -0.271615, 14.2661)
-
-[node name="pine3" parent="TreeContainer/pine5" instance=ExtResource("9_s8q1p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.91596, 0, -0.283158)
-
-[node name="pine4" parent="TreeContainer/pine5" instance=ExtResource("9_s8q1p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.4701, 0, -0.283158)
-
-[node name="pine-crooked2" parent="TreeContainer/pine5" instance=ExtResource("10_p6om3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.69211, 0, -0.0930223)
-
-[node name="pine-crooked3" parent="TreeContainer/pine5" instance=ExtResource("10_p6om3")]
-transform = Transform3D(0.707107, 1.60554e-24, 0.707107, 3.48787e-16, 1, -3.48787e-16, -0.707107, 4.93259e-16, 0.707107, 3.71115, 0, 0.228426)
-
-[node name="pine-crooked4" parent="TreeContainer/pine5" instance=ExtResource("10_p6om3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.0809, 0, -0.0930223)
-
-[node name="pine-crooked5" parent="TreeContainer/pine5" instance=ExtResource("10_p6om3")]
-transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 13.1447, 0, -0.0930223)
-
-[node name="pine6" parent="TreeContainer" instance=ExtResource("9_s8q1p")]
-transform = Transform3D(-6.55671e-08, 5.2318e-16, 1.5, 5.2318e-16, 1.5, -5.2318e-16, -1.5, 5.2318e-16, -6.55671e-08, -13.7494, -0.271615, 13.6502)
-
-[node name="pine3" parent="TreeContainer/pine6" instance=ExtResource("9_s8q1p")]
-transform = Transform3D(1, -6.33342e-23, -1.06577e-15, 1.32349e-23, 1, -1.5246e-23, -1.77636e-15, 5.69115e-23, 1, 6.37655, 0, -0.283158)
-
-[node name="pine4" parent="TreeContainer/pine6" instance=ExtResource("9_s8q1p")]
-transform = Transform3D(1, -1.3392e-22, -1.06577e-15, 1.32349e-23, 1, -1.5246e-23, -1.77636e-15, 1.27498e-22, 1, 15.8146, 0, -0.283159)
-
-[node name="pine-crooked2" parent="TreeContainer/pine6" instance=ExtResource("10_p6om3")]
-transform = Transform3D(1, -2.75092e-22, -1.06577e-15, 1.32349e-23, 1, -1.5246e-23, -1.77636e-15, 2.6867e-22, 1, 12.611, 0, -0.0930233)
-
-[node name="pine-crooked3" parent="TreeContainer/pine6" instance=ExtResource("10_p6om3")]
-transform = Transform3D(0.707107, 7.25186e-24, 0.707107, 3.48787e-16, 1, -3.48787e-16, -0.707107, 4.93259e-16, 0.707107, 3.04592, 0, 0.116466)
-
-[node name="pine-crooked5" parent="TreeContainer/pine6" instance=ExtResource("10_p6om3")]
-transform = Transform3D(1, -1.3392e-22, -1.06577e-15, 1.32349e-23, 1, -1.5246e-23, -1.77636e-15, 1.27498e-22, 1, 9.36459, 0, -0.0930233)
-
-[node name="road" type="MeshInstance3D" parent="."]
+[node name="road" type="MeshInstance3D" parent="Map/PathContainer"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.21824, -0.252066, 8.35161)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road2" type="MeshInstance3D" parent="road"]
+[node name="road2" type="MeshInstance3D" parent="Map/PathContainer/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.770162, 0, 0)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road3" type="MeshInstance3D" parent="road"]
+[node name="road3" type="MeshInstance3D" parent="Map/PathContainer/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.63452, 0, 0)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road4" type="MeshInstance3D" parent="road"]
+[node name="road4" type="MeshInstance3D" parent="Map/PathContainer/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.40468, 0, 0)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road5" type="MeshInstance3D" parent="road"]
+[node name="road5" type="MeshInstance3D" parent="Map/PathContainer/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12.3814)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road6" type="MeshInstance3D" parent="road"]
+[node name="road6" type="MeshInstance3D" parent="Map/PathContainer/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.770162, 0, -12.3814)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road7" type="MeshInstance3D" parent="road"]
+[node name="road7" type="MeshInstance3D" parent="Map/PathContainer/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.63452, 0, -12.3814)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road8" type="MeshInstance3D" parent="road"]
+[node name="road8" type="MeshInstance3D" parent="Map/PathContainer/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.40468, 0, -12.3814)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road9" type="MeshInstance3D" parent="road"]
+[node name="road9" type="MeshInstance3D" parent="Map/PathContainer/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.40468, -9.53674e-07, -0.980911)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road10" type="MeshInstance3D" parent="road"]
+[node name="road10" type="MeshInstance3D" parent="Map/PathContainer/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.40468, -9.53674e-07, -1.99262)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road12" type="MeshInstance3D" parent="road"]
+[node name="road12" type="MeshInstance3D" parent="Map/PathContainer/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.40468, -9.53674e-07, -3.89665)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road11" type="MeshInstance3D" parent="road"]
+[node name="road11" type="MeshInstance3D" parent="Map/PathContainer/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.40468, -9.53674e-07, -2.9185)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road13" type="MeshInstance3D" parent="road"]
+[node name="road13" type="MeshInstance3D" parent="Map/PathContainer/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.40468, -9.53674e-07, -4.90836)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road14" type="MeshInstance3D" parent="road"]
+[node name="road14" type="MeshInstance3D" parent="Map/PathContainer/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.40468, -9.53674e-07, -5.83424)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road15" type="MeshInstance3D" parent="road"]
+[node name="road15" type="MeshInstance3D" parent="Map/PathContainer/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.40468, -9.53674e-07, -6.79881)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road16" type="MeshInstance3D" parent="road"]
+[node name="road16" type="MeshInstance3D" parent="Map/PathContainer/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.40468, -9.53674e-07, -7.81052)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road17" type="MeshInstance3D" parent="road"]
+[node name="road17" type="MeshInstance3D" parent="Map/PathContainer/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.40468, -9.53674e-07, -8.7364)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road18" type="MeshInstance3D" parent="road"]
+[node name="road18" type="MeshInstance3D" parent="Map/PathContainer/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.40468, -9.53674e-07, -9.57877)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road19" type="MeshInstance3D" parent="road"]
+[node name="road19" type="MeshInstance3D" parent="Map/PathContainer/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.40468, -9.53674e-07, -10.5905)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="road20" type="MeshInstance3D" parent="road"]
+[node name="road20" type="MeshInstance3D" parent="Map/PathContainer/road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.40468, -9.53674e-07, -11.5164)
 mesh = SubResource("ArrayMesh_5oegq")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_hshbf")
 
-[node name="CSGPolygon3D" type="CSGPolygon3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 3, 9.01436, -0.193327, -4.93727)
-material_override = SubResource("StandardMaterial3D_hicms")
-use_collision = true
-polygon = PackedVector2Array(0, 0, -1.85684, -0.0852935, 6.05583, 2.93269, 5.78938, -0.113121)
+[node name="CharacterBody3D" type="CharacterBody3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.333333, -9.01436, 0.355973, 1.64576)
+script = ExtResource("1_tn2vw")
 
-[node name="CSGPolygon3D2" type="CSGPolygon3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 3, 9.01436, -0.193327, 10.9335)
-material_override = SubResource("StandardMaterial3D_hicms")
-use_collision = true
-polygon = PackedVector2Array(0, 0, -1.85684, -0.0852935, 6.05583, 2.93269, 5.78938, -0.113121)
+[node name="Gun" type="MeshInstance3D" parent="Map/CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.525587, 0.853978, -0.388565)
+mesh = SubResource("BoxMesh_3x3qa")
 
-[node name="moon" type="CSGSphere3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 215.127, 150.569, -149.661)
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.749922, 0)
+mesh = SubResource("CapsuleMesh_ptp78")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.73289, 0)
+shape = SubResource("ConvexPolygonShape3D_h7ad7")
+
+[node name="Head" type="Node3D" parent="Map/CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.929911, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Map/CharacterBody3D/Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0725873, 1.38293, -0.00361061)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Map"]
+transform = Transform3D(-0.62932, -0.423264, 0.65177, 0, 0.838671, 0.544639, -0.259049, 0.114251, -0.175931, -9.01436, 0.193327, 1.64576)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Map"]
+environment = SubResource("Environment_3a6ed")
+
+[node name="moon" type="CSGSphere3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.333333, 206.113, 150.762, -48.2412)
 material_overlay = SubResource("StandardMaterial3D_ki480")
 cast_shadow = 0
 radius = 20.0
 
-[node name="Node3D" parent="." instance=ExtResource("5_a74lp")]
+[node name="lowerLevel" type="CSGBox3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.333333, 54.442, -8.29004, 2.06929)
+use_collision = true
+size = Vector3(32.2395, 0.297241, 32.7271)
+material = SubResource("StandardMaterial3D_stacp")
+
+[node name="Slope" type="CSGPolygon3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 11, 7.12134, -0.971483, 7.39259)
+use_collision = true
+polygon = PackedVector2Array(0, 0, 0, 1, 1, 1, 31.5069, -7.50943)
+material = SubResource("StandardMaterial3D_w5i7p")
+
+[node name="upperLevel" type="CSGBox3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.333333, -9.29982, -0.263123, 2.00503)
+use_collision = true
+size = Vector3(32.8499, 0.297241, 33.3615)
+material = SubResource("StandardMaterial3D_stacp")
+
+[node name="FenceContainer" type="Node3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 10.6667, 7.12134, -0.971483, 7.07236)
+
+[node name="Node3D" parent="Map/FenceContainer" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.03125, -1.51774, 0.856978, -0.946905)
+
+[node name="Node3D11" parent="Map/FenceContainer/Node3D" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.7275, 0, 0)
+
+[node name="Node3D3" parent="Map/FenceContainer/Node3D" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.92259, 0, 0)
+
+[node name="Node3D2" parent="Map/FenceContainer/Node3D" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.98285, 0, 0)
+
+[node name="Node3D4" parent="Map/FenceContainer/Node3D" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.90544, 0, 0)
+
+[node name="Node3D5" parent="Map/FenceContainer/Node3D" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9724, 0, 0)
+
+[node name="Node3D6" parent="Map/FenceContainer/Node3D" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9552, 0, 0)
+
+[node name="Node3D7" parent="Map/FenceContainer/Node3D" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.895, 0, 0)
+
+[node name="Node3D8" parent="Map/FenceContainer/Node3D" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.8778, 0, 0)
+
+[node name="Node3D9" parent="Map/FenceContainer/Node3D" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.8049, 0, 0)
+
+[node name="Node3D10" parent="Map/FenceContainer/Node3D" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7877, 0, 0)
+
+[node name="Node3D2" parent="Map/FenceContainer" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.03125, -1.51774, 0.856978, 0.0747351)
+
+[node name="Node3D11" parent="Map/FenceContainer/Node3D2" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.7275, 0, 0)
+
+[node name="Node3D3" parent="Map/FenceContainer/Node3D2" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.92259, 0, 0)
+
+[node name="Node3D2" parent="Map/FenceContainer/Node3D2" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.98285, 0, 0)
+
+[node name="Node3D4" parent="Map/FenceContainer/Node3D2" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.90544, 0, 0)
+
+[node name="Node3D5" parent="Map/FenceContainer/Node3D2" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9724, 0, 0)
+
+[node name="Node3D6" parent="Map/FenceContainer/Node3D2" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9552, 0, 0)
+
+[node name="Node3D7" parent="Map/FenceContainer/Node3D2" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.895, 0, 0)
+
+[node name="Node3D8" parent="Map/FenceContainer/Node3D2" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.8778, 0, 0)
+
+[node name="Node3D9" parent="Map/FenceContainer/Node3D2" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.8049, 0, 0)
+
+[node name="Node3D10" parent="Map/FenceContainer/Node3D2" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7877, 0, 0)
+
+[node name="Node3D3" parent="Map/FenceContainer" instance=ExtResource("3_2f24e")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -0.03125, 1.08996e-17, -1.36598e-09, -31.2946, 0.856978, -0.93944)
+
+[node name="Node3D11" parent="Map/FenceContainer/Node3D3" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.7275, 0, 0)
+
+[node name="Node3D3" parent="Map/FenceContainer/Node3D3" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.92259, 0, 0)
+
+[node name="Node3D2" parent="Map/FenceContainer/Node3D3" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.98285, 0, 0)
+
+[node name="Node3D4" parent="Map/FenceContainer/Node3D3" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.90544, 0, 0)
+
+[node name="Node3D5" parent="Map/FenceContainer/Node3D3" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9724, 0, 0)
+
+[node name="Node3D6" parent="Map/FenceContainer/Node3D3" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9552, 0, 0)
+
+[node name="Node3D7" parent="Map/FenceContainer/Node3D3" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.895, 0, 0)
+
+[node name="Node3D8" parent="Map/FenceContainer/Node3D3" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.8778, 0, 0)
+
+[node name="Node3D9" parent="Map/FenceContainer/Node3D3" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.8049, 0, 0)
+
+[node name="Node3D10" parent="Map/FenceContainer/Node3D3" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7877, 0, 0)
+
+[node name="Node3D4" parent="Map/FenceContainer" instance=ExtResource("3_2f24e")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -0.03125, 1.08996e-17, -1.36598e-09, 64.6699, -7.20865, -0.93944)
+
+[node name="Node3D11" parent="Map/FenceContainer/Node3D4" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 1.12238e-23, 0, 1.12238e-23, 1, -29.7275, 0, 0)
+
+[node name="Node3D3" parent="Map/FenceContainer/Node3D4" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.92259, 0, 0)
+
+[node name="Node3D2" parent="Map/FenceContainer/Node3D4" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.98285, 0, 0)
+
+[node name="Node3D4" parent="Map/FenceContainer/Node3D4" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.90544, 0, 0)
+
+[node name="Node3D5" parent="Map/FenceContainer/Node3D4" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9724, 0, 0)
+
+[node name="Node3D6" parent="Map/FenceContainer/Node3D4" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9552, 0, 0)
+
+[node name="Node3D7" parent="Map/FenceContainer/Node3D4" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.895, 0, 0)
+
+[node name="Node3D8" parent="Map/FenceContainer/Node3D4" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.8778, 0, 0)
+
+[node name="Node3D9" parent="Map/FenceContainer/Node3D4" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.8049, 0, 0)
+
+[node name="Node3D10" parent="Map/FenceContainer/Node3D4" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7877, 0, 0)
+
+[node name="Node3D5" parent="Map/FenceContainer" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.03125, 62.147, -7.22935, -0.946905)
+
+[node name="Node3D11" parent="Map/FenceContainer/Node3D5" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.7275, 0, 0)
+
+[node name="Node3D3" parent="Map/FenceContainer/Node3D5" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.92259, 0, 0)
+
+[node name="Node3D2" parent="Map/FenceContainer/Node3D5" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.98285, 0, 0)
+
+[node name="Node3D4" parent="Map/FenceContainer/Node3D5" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.90544, 0, 0)
+
+[node name="Node3D5" parent="Map/FenceContainer/Node3D5" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9724, 0, 0)
+
+[node name="Node3D6" parent="Map/FenceContainer/Node3D5" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9552, 0, 0)
+
+[node name="Node3D7" parent="Map/FenceContainer/Node3D5" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.895, 0, 0)
+
+[node name="Node3D8" parent="Map/FenceContainer/Node3D5" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.8778, 0, 0)
+
+[node name="Node3D9" parent="Map/FenceContainer/Node3D5" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.8049, 0, 0)
+
+[node name="Node3D10" parent="Map/FenceContainer/Node3D5" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7877, 0, 0)
+
+[node name="Node3D6" parent="Map/FenceContainer" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.03125, 62.147, -7.22935, 0.0719123)
+
+[node name="Node3D11" parent="Map/FenceContainer/Node3D6" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.7275, 0, 0)
+
+[node name="Node3D3" parent="Map/FenceContainer/Node3D6" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.92259, 0, 0)
+
+[node name="Node3D2" parent="Map/FenceContainer/Node3D6" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.98285, 0, 0)
+
+[node name="Node3D4" parent="Map/FenceContainer/Node3D6" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.90544, 0, 0)
+
+[node name="Node3D5" parent="Map/FenceContainer/Node3D6" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9724, 0, 0)
+
+[node name="Node3D6" parent="Map/FenceContainer/Node3D6" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9552, 0, 0)
+
+[node name="Node3D7" parent="Map/FenceContainer/Node3D6" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.895, 0, 0)
+
+[node name="Node3D8" parent="Map/FenceContainer/Node3D6" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.8778, 0, 0)
+
+[node name="Node3D9" parent="Map/FenceContainer/Node3D6" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.8049, 0, 0)
+
+[node name="Node3D10" parent="Map/FenceContainer/Node3D6" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7877, 0, 0)
+
+[node name="Node3D7" parent="Map/FenceContainer" instance=ExtResource("3_2f24e")]
+transform = Transform3D(0.962923, 0.269777, 0, -0.269777, 0.962923, 0, 0, 0, 0.03125, 29.4634, -7.22935, -0.946905)
+
+[node name="Node3D11" parent="Map/FenceContainer/Node3D7" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.7275, 0, 0)
+
+[node name="Node3D3" parent="Map/FenceContainer/Node3D7" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.92259, 0, 0)
+
+[node name="Node3D2" parent="Map/FenceContainer/Node3D7" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.98285, 0, 0)
+
+[node name="Node3D4" parent="Map/FenceContainer/Node3D7" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.90544, 0, 0)
+
+[node name="Node3D5" parent="Map/FenceContainer/Node3D7" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9724, 0, 0)
+
+[node name="Node3D6" parent="Map/FenceContainer/Node3D7" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9552, 0, 0)
+
+[node name="Node3D7" parent="Map/FenceContainer/Node3D7" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.895, 0, 0)
+
+[node name="Node3D8" parent="Map/FenceContainer/Node3D7" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.8778, 0, 0)
+
+[node name="Node3D9" parent="Map/FenceContainer/Node3D7" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.8049, 0, 0)
+
+[node name="Node3D10" parent="Map/FenceContainer/Node3D7" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7877, 0, 0)
+
+[node name="Node3D8" parent="Map/FenceContainer" instance=ExtResource("3_2f24e")]
+transform = Transform3D(0.962923, 0.269777, 0, -0.269777, 0.962923, 0, 0, 0, 0.03125, 29.4634, -7.22935, 0.0705448)
+
+[node name="Node3D11" parent="Map/FenceContainer/Node3D8" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.7275, 0, 0)
+
+[node name="Node3D3" parent="Map/FenceContainer/Node3D8" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.92259, 0, 0)
+
+[node name="Node3D2" parent="Map/FenceContainer/Node3D8" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.98285, 0, 0)
+
+[node name="Node3D4" parent="Map/FenceContainer/Node3D8" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.90544, 0, 0)
+
+[node name="Node3D5" parent="Map/FenceContainer/Node3D8" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9724, 0, 0)
+
+[node name="Node3D6" parent="Map/FenceContainer/Node3D8" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9552, 0, 0)
+
+[node name="Node3D7" parent="Map/FenceContainer/Node3D8" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.895, 0, 0)
+
+[node name="Node3D8" parent="Map/FenceContainer/Node3D8" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.8778, 0, 0)
+
+[node name="Node3D9" parent="Map/FenceContainer/Node3D8" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.8049, 0, 0)
+
+[node name="Node3D10" parent="Map/FenceContainer/Node3D8" instance=ExtResource("3_2f24e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7877, 0, 0)
+
+[node name="GraveContainer" type="Node3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.333333, -9.01436, 0.193327, 1.64576)
+
+[node name="Node3D" parent="Map/GraveContainer" instance=ExtResource("5_a74lp")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 49.2973, -8.33475, -5.39018)
+
+[node name="Node3D2" parent="Map/GraveContainer" instance=ExtResource("5_a74lp")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 49.316, -8.33475, -2.98969)
+
+[node name="Node3D3" parent="Map/GraveContainer" instance=ExtResource("5_a74lp")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 49.316, -8.33475, -0.590847)
+
+[node name="Node3D4" parent="Map/GraveContainer" instance=ExtResource("5_a74lp")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 49.316, -8.33475, 1.99863)
+
+[node name="Node3D5" parent="Map/GraveContainer" instance=ExtResource("5_a74lp")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 49.316, -8.33475, 4.55378)
+
+[node name="Node3D6" parent="Map/GraveContainer" instance=ExtResource("5_a74lp")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 49.316, -8.33475, 6.98963)
+
+[node name="gravestone-round4" parent="Map/GraveContainer" instance=ExtResource("6_44nav")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 51.5226, -8.33475, 4.65038)
+
+[node name="gravestone-round5" parent="Map/GraveContainer" instance=ExtResource("6_44nav")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 51.5226, -8.33475, 6.84286)
+
+[node name="gravestone-cross2" parent="Map/GraveContainer" instance=ExtResource("7_y82dc")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 51.3443, -8.33475, -0.757761)
+
+[node name="gravestone-cross3" parent="Map/GraveContainer" instance=ExtResource("7_y82dc")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 51.3443, -8.33475, 1.95162)
+
+[node name="gravestone-round2" parent="Map/GraveContainer" instance=ExtResource("6_44nav")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 51.5226, -8.33475, -5.37602)
+
+[node name="gravestone-round3" parent="Map/GraveContainer" instance=ExtResource("6_44nav")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 51.5226, -8.33475, -3.23646)
+
+[node name="Node3D7" parent="Map/GraveContainer" instance=ExtResource("5_a74lp")]
 transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 72.091, -8.33475, -5.39018)
 
-[node name="Node3D2" parent="." instance=ExtResource("5_a74lp")]
-transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 72.1097, -8.33475, -2.98969)
+[node name="Node3D2" parent="Map/GraveContainer/Node3D7" instance=ExtResource("5_a74lp")]
+transform = Transform3D(1, 0, 0, 0, 1, 1.12238e-23, 0, 1.12238e-23, 1, -2.40049, 0, 0.0186996)
 
-[node name="Node3D3" parent="." instance=ExtResource("5_a74lp")]
-transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 72.1097, -8.33475, -0.590847)
+[node name="Node3D3" parent="Map/GraveContainer/Node3D7" instance=ExtResource("5_a74lp")]
+transform = Transform3D(1, 0, 0, 0, 1, 1.12238e-23, 0, 1.12238e-23, 1, -4.79933, 0, 0.0186996)
 
-[node name="Node3D4" parent="." instance=ExtResource("5_a74lp")]
-transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 72.1097, -8.33475, 1.99863)
+[node name="Node3D4" parent="Map/GraveContainer/Node3D7" instance=ExtResource("5_a74lp")]
+transform = Transform3D(1, 0, 0, 0, 1, 1.12238e-23, 0, 1.12238e-23, 1, -7.38881, 0, 0.0186996)
 
-[node name="Node3D5" parent="." instance=ExtResource("5_a74lp")]
-transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 72.1097, -8.33475, 4.55378)
+[node name="Node3D5" parent="Map/GraveContainer/Node3D7" instance=ExtResource("5_a74lp")]
+transform = Transform3D(1, 0, 0, 0, 1, 1.12238e-23, 0, 1.12238e-23, 1, -9.94396, 0, 0.0186996)
 
-[node name="Node3D6" parent="." instance=ExtResource("5_a74lp")]
-transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 72.1097, -8.33475, 6.98963)
+[node name="Node3D6" parent="Map/GraveContainer/Node3D7" instance=ExtResource("5_a74lp")]
+transform = Transform3D(1, 0, 0, 0, 1, 1.12238e-23, 0, 1.12238e-23, 1, -12.3798, 0, 0.0186996)
 
-[node name="gravestone-round4" parent="." instance=ExtResource("6_44nav")]
-transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 74.3163, -8.33475, 4.65038)
+[node name="gravestone-round4" parent="Map/GraveContainer/Node3D7" instance=ExtResource("6_44nav")]
+transform = Transform3D(1, 0, 0, 0, 1, 1.12238e-23, 0, 1.12238e-23, 1, -10.0406, 0, 2.2253)
 
-[node name="gravestone-round5" parent="." instance=ExtResource("6_44nav")]
-transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 74.3163, -8.33475, 6.84286)
+[node name="gravestone-round5" parent="Map/GraveContainer/Node3D7" instance=ExtResource("6_44nav")]
+transform = Transform3D(1, 0, 0, 0, 1, 1.12238e-23, 0, 1.12238e-23, 1, -12.233, 0, 2.2253)
 
-[node name="gravestone-cross2" parent="." instance=ExtResource("7_y82dc")]
-transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 74.138, -8.33475, -0.757761)
+[node name="gravestone-cross2" parent="Map/GraveContainer/Node3D7" instance=ExtResource("7_y82dc")]
+transform = Transform3D(1, 0, 0, 0, 1, 1.12238e-23, 0, 1.12238e-23, 1, -4.63242, 0, 2.047)
 
-[node name="gravestone-cross3" parent="." instance=ExtResource("7_y82dc")]
-transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 74.138, -8.33475, 1.95162)
+[node name="gravestone-cross3" parent="Map/GraveContainer/Node3D7" instance=ExtResource("7_y82dc")]
+transform = Transform3D(1, 0, 0, 0, 1, 1.12238e-23, 0, 1.12238e-23, 1, -7.3418, 0, 2.047)
 
-[node name="gravestone-round2" parent="." instance=ExtResource("6_44nav")]
-transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 74.3163, -8.33475, -5.37602)
+[node name="gravestone-round2" parent="Map/GraveContainer/Node3D7" instance=ExtResource("6_44nav")]
+transform = Transform3D(1, 0, 0, 0, 1, 1.12238e-23, 0, 1.12238e-23, 1, -0.0141602, 0, 2.2253)
 
-[node name="gravestone-round3" parent="." instance=ExtResource("6_44nav")]
-transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 74.3163, -8.33475, -3.23646)
+[node name="gravestone-round3" parent="Map/GraveContainer/Node3D7" instance=ExtResource("6_44nav")]
+transform = Transform3D(1, 0, 0, 0, 1, 1.12238e-23, 0, 1.12238e-23, 1, -2.15372, 0, 2.2253)
+
+[node name="TreeContainer" type="Node3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.333333, -9.01436, 0.193327, 1.64576)
+
+[node name="pine2" parent="Map/TreeContainer" instance=ExtResource("9_s8q1p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.5898, -8.33475, -11.0872)
+
+[node name="pine3" parent="Map/TreeContainer/pine2" instance=ExtResource("9_s8q1p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1776, 0, -0.283158)
+
+[node name="pine4" parent="Map/TreeContainer/pine2" instance=ExtResource("9_s8q1p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.3018, 0, -0.283158)
+
+[node name="pine-crooked2" parent="Map/TreeContainer/pine2" instance=ExtResource("10_p6om3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.75109, 0, -0.0930223)
+
+[node name="pine-crooked3" parent="Map/TreeContainer/pine2" instance=ExtResource("10_p6om3")]
+transform = Transform3D(0.707107, 1.60554e-24, 0.707107, 3.48787e-16, 1, -3.48787e-16, -0.707107, 4.93259e-16, 0.707107, 3.71115, 0, 0.228426)
+
+[node name="pine-crooked4" parent="Map/TreeContainer/pine2" instance=ExtResource("10_p6om3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.105, 0, -0.0930223)
+
+[node name="pine-crooked5" parent="Map/TreeContainer/pine2" instance=ExtResource("10_p6om3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7965, 0, -0.0930223)
+
+[node name="pine-crooked6" parent="Map/TreeContainer" instance=ExtResource("10_p6om3")]
+transform = Transform3D(0.67, 0, 0, 0, 0.67, 0, 0, 0, 0.67, 57.0456, -8.33475, 3.89985)
+
+[node name="pine-crooked2" parent="Map/TreeContainer/pine-crooked6" instance=ExtResource("10_p6om3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.048378, 0, -9.16239)
+
+[node name="pine3" parent="Map/TreeContainer" instance=ExtResource("9_s8q1p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.5898, -8.33475, 13.8084)
+
+[node name="pine3" parent="Map/TreeContainer/pine3" instance=ExtResource("9_s8q1p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1776, 0, -0.283158)
+
+[node name="pine4" parent="Map/TreeContainer/pine3" instance=ExtResource("9_s8q1p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.3018, 0, -0.283158)
+
+[node name="pine-crooked2" parent="Map/TreeContainer/pine3" instance=ExtResource("10_p6om3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.75109, 0, -0.0930223)
+
+[node name="pine-crooked3" parent="Map/TreeContainer/pine3" instance=ExtResource("10_p6om3")]
+transform = Transform3D(0.707107, 1.60554e-24, 0.707107, 3.48787e-16, 1, -3.48787e-16, -0.707107, 4.93259e-16, 0.707107, 3.71115, 0, 0.228426)
+
+[node name="pine-crooked4" parent="Map/TreeContainer/pine3" instance=ExtResource("10_p6om3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.105, 0, -0.0930223)
+
+[node name="pine-crooked5" parent="Map/TreeContainer/pine3" instance=ExtResource("10_p6om3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7965, 0, -0.0930223)
+
+[node name="pine4" parent="Map/TreeContainer" instance=ExtResource("9_s8q1p")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -10.7271, -0.271615, -11.0872)
+
+[node name="pine3" parent="Map/TreeContainer/pine4" instance=ExtResource("9_s8q1p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.73735, 0, -0.283158)
+
+[node name="pine4" parent="Map/TreeContainer/pine4" instance=ExtResource("9_s8q1p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.7173, 0, -0.283158)
+
+[node name="pine-crooked2" parent="Map/TreeContainer/pine4" instance=ExtResource("10_p6om3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.81198, 0, -0.0930223)
+
+[node name="pine-crooked3" parent="Map/TreeContainer/pine4" instance=ExtResource("10_p6om3")]
+transform = Transform3D(0.707107, 1.60554e-24, 0.707107, 3.48787e-16, 1, -3.48787e-16, -0.707107, 4.93259e-16, 0.707107, 2.79173, 0, 0.228426)
+
+[node name="pine-crooked4" parent="Map/TreeContainer/pine4" instance=ExtResource("10_p6om3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.9884, 0, -0.0930223)
+
+[node name="pine-crooked5" parent="Map/TreeContainer/pine4" instance=ExtResource("10_p6om3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.7556, 0, -0.0930223)
+
+[node name="pine5" parent="Map/TreeContainer" instance=ExtResource("9_s8q1p")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -10.6196, -0.271615, 14.2661)
+
+[node name="pine3" parent="Map/TreeContainer/pine5" instance=ExtResource("9_s8q1p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.91596, 0, -0.283158)
+
+[node name="pine4" parent="Map/TreeContainer/pine5" instance=ExtResource("9_s8q1p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.4701, 0, -0.283158)
+
+[node name="pine-crooked2" parent="Map/TreeContainer/pine5" instance=ExtResource("10_p6om3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.69211, 0, -0.0930223)
+
+[node name="pine-crooked3" parent="Map/TreeContainer/pine5" instance=ExtResource("10_p6om3")]
+transform = Transform3D(0.707107, 1.60554e-24, 0.707107, 3.48787e-16, 1, -3.48787e-16, -0.707107, 4.93259e-16, 0.707107, 3.71115, 0, 0.228426)
+
+[node name="pine-crooked4" parent="Map/TreeContainer/pine5" instance=ExtResource("10_p6om3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.0809, 0, -0.0930223)
+
+[node name="pine-crooked5" parent="Map/TreeContainer/pine5" instance=ExtResource("10_p6om3")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 13.1447, 0, -0.0930223)
+
+[node name="pine6" parent="Map/TreeContainer" instance=ExtResource("9_s8q1p")]
+transform = Transform3D(-6.55671e-08, 5.2318e-16, 1.5, 5.2318e-16, 1.5, -5.2318e-16, -1.5, 5.2318e-16, -6.55671e-08, -13.7494, -0.271615, 13.6502)
+
+[node name="pine3" parent="Map/TreeContainer/pine6" instance=ExtResource("9_s8q1p")]
+transform = Transform3D(1, -6.33342e-23, -1.06577e-15, 1.32349e-23, 1, -1.5246e-23, -1.77636e-15, 5.69115e-23, 1, 6.37655, 0, -0.283158)
+
+[node name="pine4" parent="Map/TreeContainer/pine6" instance=ExtResource("9_s8q1p")]
+transform = Transform3D(1, -1.3392e-22, -1.06577e-15, 1.32349e-23, 1, -1.5246e-23, -1.77636e-15, 1.27498e-22, 1, 15.8146, 0, -0.283159)
+
+[node name="pine-crooked2" parent="Map/TreeContainer/pine6" instance=ExtResource("10_p6om3")]
+transform = Transform3D(1, -2.75092e-22, -1.06577e-15, 1.32349e-23, 1, -1.5246e-23, -1.77636e-15, 2.6867e-22, 1, 12.611, 0, -0.0930233)
+
+[node name="pine-crooked3" parent="Map/TreeContainer/pine6" instance=ExtResource("10_p6om3")]
+transform = Transform3D(0.707107, 7.25186e-24, 0.707107, 3.48787e-16, 1, -3.48787e-16, -0.707107, 4.93259e-16, 0.707107, 3.04592, 0, 0.116466)
+
+[node name="pine-crooked5" parent="Map/TreeContainer/pine6" instance=ExtResource("10_p6om3")]
+transform = Transform3D(1, -1.3392e-22, -1.06577e-15, 1.32349e-23, 1, -1.5246e-23, -1.77636e-15, 1.27498e-22, 1, 9.36459, 0, -0.0930233)
